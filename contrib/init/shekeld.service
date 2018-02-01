@@ -1,0 +1,26 @@
+[Unit]
+Description=Shekel's distributed currency daemon
+After=network.target
+
+[Service]
+User=shekel
+Group=shekel
+
+Type=forking
+PIDFile=/var/lib/shekeld/shekeld.pid
+
+ExecStart=/usr/bin/shekeld -daemon -pid=/var/lib/shekeld/shekeld.pid \
+          -conf=/etc/shekel/shekel.conf -datadir=/var/lib/shekeld
+
+ExecStop=-/usr/bin/shekel-cli -conf=/etc/shekel/shekel.conf \
+         -datadir=/var/lib/shekeld stop
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

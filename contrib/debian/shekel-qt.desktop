@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Shekel
+Comment=Shekel P2P Cryptocurrency
+Comment[fr]=Shekel, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=Shekel, eşten eşe kriptografik sanal para birimi
+Exec=shekel-qt %u
+Terminal=false
+Type=Application
+Icon=shekel128
+MimeType=x-scheme-handler/shekel;
+Categories=Office;Finance;

@@ -1,0 +1,26 @@
+# /etc/conf.d/shekeld: config file for /etc/init.d/shekeld
+
+# Config file location
+#BITCOIND_CONFIGFILE="/etc/shekel/shekel.conf"
+
+# What directory to write pidfile to?  (created and owned by $BITCOIND_USER)
+#BITCOIND_PIDDIR="/var/run/shekeld"
+
+# What filename to give the pidfile
+#BITCOIND_PIDFILE="${BITCOIND_PIDDIR}/shekeld.pid"
+
+# Where to write shekeld data (be mindful that the blockchain is large)
+#BITCOIND_DATADIR="/var/lib/shekeld"
+
+# User and group to own shekeld process
+#BITCOIND_USER="shekel"
+#BITCOIND_GROUP="shekel"
+
+# Path to shekeld executable
+#BITCOIND_BIN="/usr/bin/shekeld"
+
+# Nice value to run shekeld under
+#BITCOIND_NICE=0
+
+# Additional options (avoid -conf and -datadir, use flags above)
+BITCOIND_OPTS=""
