@@ -160,14 +160,16 @@ public:
         assert(hashGenesisBlock == uint256("0x0000077c3b0f8619314ed8f0d343673052ab36b3ebac8808bd3bed50b9d60cec"));
         assert(genesis.hashMerkleRoot == uint256("0xa1cbbd156e5c530444dc3c850daf40201fe37d3269bd84b1ff2333a1b0c55a90"));
 		
-		vSeeds.push_back(CDNSSeedData("shekel.io", "dns.shekel.io"));       // Primary DNS Seeder
-        vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176"));         // Single node address
-        vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131"));       // Single node address
-        vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108"));       // Single node address
-		vSeeds.push_back(CDNSSeedData("107.191.44.102", "107.191.44.102"));       // Single node address
+		vSeeds.push_back(CDNSSeedData("nodes.shekel.pw", "nodes.shekel.pw")); // Primary DNS Seeder
+		vSeeds.push_back(CDNSSeedData("shekel.nodes.gyservers.com", "shekel.nodes.gyservers.com")); // Secondary DNS Seeder
+		vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176")); // Single node address
+		vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131")); // Single node address
+		vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108")); // Single node address
+		vSeeds.push_back(CDNSSeedData("107.191.44.102", "107.191.44.102")); // Single node address
 		vSeeds.push_back(CDNSSeedData("108.61.241.154", "199.247.6.191"));
-		vSeeds.push_back(CDNSSeedData("45.77.9.77", "108.61.96.146"));
+		vSeeds.push_back(CDNSSeedData("45.77.9.77", "45.77.9.77"));
 		vSeeds.push_back(CDNSSeedData("45.77.62.126", "45.77.62.126"));
+		vSeeds.push_back(CDNSSeedData("108.61.96.146", "108.61.96.146"));
 		
 		
 
