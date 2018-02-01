@@ -11,7 +11,7 @@ Shekel is a cutting edge cryptocurrency, with many features not available in mos
   technology used to secure the network and provide the above features, each Masternode is secured
   with a collateral of 25K JEW.
 
-More information at [ShekelCoin.com](http://www.shekelcoin.com) Visit our ANN thread at [BitcoinTalk](http://www.bitcointalk.org/index.php)
+More information at [Shekel.io](http://www.shekel.io) Visit our ANN thread at [BitcoinTalk](https://bitcointalk.org/index.php?topic=2455628.0)
 
 
 
