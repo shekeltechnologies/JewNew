@@ -20,7 +20,6 @@ More information at [Shekel.io](http://www.shekel.io) Visit our ANN thread at [B
 <tr><td>Algo</td><td>Quark</td></tr>
 <tr><td>Block Time</td><td>60 Seconds</td></tr>
 <tr><td>Difficulty Retargeting</td><td>Every Block</td></tr>
-<tr><td>Max Coin Supply (PoW Phase)</td><td>65,000,000 JEW</td></tr>
 <tr><td>Max Coin Supply (PoS Phase)</td><td>Infinite</td></tr>
 <tr><td>Premine</td><td>65,000,000 JEW*</td></tr>
 </table>
@@ -31,7 +30,7 @@ More information at [Shekel.io](http://www.shekel.io) Visit our ANN thread at [B
 ### Reward Distribution
 
 <table>
-<th colspan=4>PoW Phase</th>
+<th colspan=4>Premine Phase</th>
 <tr><th>Block Height</th><th>Reward Amount</th><th>Notes</th><th>Duration (Days)</th></tr>
 <tr><td>1</td><td>65,000,000 JEW</td><td>Initial Premine*</td><td>0 Days</td></tr>
 </table>
