@@ -40,7 +40,7 @@ More information at [Shekel.io](http://www.shekel.io) Visit our ANN thread at [B
 ### PoS Rewards Breakdown
 
 <table>
-  <th>Phase</th><th>Approx Start date</th><th>Block Height</th><th>Reward</th><th>Masternode reward</th><th>Stake Reward</th>
+  <th>Phase</th><th>Block Height</th><th>Approx Start date</th><th>Reward</th><th>Masternode reward</th><th>Stake Reward</th>
   <tr><td>Phase 1</td><td>2500-24999</td><td>01-Feb-18</td><td>350 JEW</td><td>70% (245 JEW)</td><td>30% (105 JEW)</td></tr>
 <tr><td>Phase 2</td><td>25000-119999</td><td>16-Feb-18</td><td>225 JEW</td><td>70% (158 JEW)</td><td>30% (68 JEW)</td></tr>
 <tr><td>Phase 3</td><td>120000-199999</td><td>23-Apr-18</td><td>150 JEW</td><td>70% (105 JEW)</td><td>30% (45 JEW)</td></tr>
