@@ -114,7 +114,7 @@ public:
         pchMessageStart[1] = 0x43;
         pchMessageStart[2] = 0x49;
         pchMessageStart[3] = 0x56;
-        vAlertPubKey = ParseHex("047da8dd8dd82c7247a2a6e236cc5e4d775e1e08a4ce95362b862685b094492699b4ffacf1f87cedaa5d633835986bb5f5fd4ff458c27bd3c03c9e3281342560c3");
+        vAlertPubKey = ParseHex("04bcbf5f4dab42002143f5b25a2e6fd658dd300508c0fd3c890edfa241edcdd224c9fb62d0a3e86ab655c384b598bd3e92d25fee84774060a0d461f0e9483587e5");
         nDefaultPort = 5500;
         bnProofOfWorkLimit = ~uint256(0) >> 20; // Shekel starting difficulty is 1 / 2^12
         nSubsidyHalvingInterval = 210000;
@@ -172,8 +172,8 @@ public:
 		
 	vSeeds.push_back(CDNSSeedData("nodes.shekel.pw", "nodes.shekel.pw")); // Primary DNS Seeder
 	vSeeds.push_back(CDNSSeedData("shekel.nodes.gyservers.com", "shekel.nodes.gyservers.com")); // Secondary DNS Seeder
-	vSeeds.push_back(CDNSSeedData("shekel.seeds.mn.zone", "shekel.seeds.mn.zone")); // Single node address
-	vSeeds.push_back(CDNSSeedData("shekel.mnseeds.com", "shekel.mnseeds.com")); // Single node address
+	vSeeds.push_back(CDNSSeedData("shekel.seeds.mn.zone", "shekel.seeds.mn.zone")); // Third party DNS Seeder
+	vSeeds.push_back(CDNSSeedData("shekel.mnseeds.com", "shekel.mnseeds.com")); // Third party DNS Seeder
 		
 		
 
@@ -198,7 +198,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "0459eede7626441f7802af2736cb3a4aeb3e1f95070cde39d068a4f16525ee8fdd3c075f29f9e115aeb91952239194aa6ac19765574fed8a0d7f174f2b450e9630";
+        strSporkKey = "047da8dd8dd82c7247a2a6e236cc5e4d775e1e08a4ce95362b862685b094492699b4ffacf1f87cedaa5d633835986bb5f5fd4ff458c27bd3c03c9e3281342560c3";
         strObfuscationPoolDummyAddress = "SSQo21b24dD6AvQ2QyAfQFdBHTSw894tJb";
         nStartMasternodePayments = 1516371317; //Wed, 25 Jun 2014 20:36:16 GMT
 
@@ -234,7 +234,7 @@ public:
         pchMessageStart[1] = 0x76;
         pchMessageStart[2] = 0x56;
         pchMessageStart[3] = 0xca;
-        vAlertPubKey = ParseHex("044e3bfa8d1a0f0807dfd6a85d18ad39e4df40b3b0c7fb1c46f4840805dbe0c810c6cfd2e56f7df41966433d2072aca2115e0dae56387a199d8d2aa69b52398436");
+        vAlertPubKey = ParseHex("042292b1f401860eea99e1a8a103effbd7e1c013a59a1a3a0c91c9d1997a0bc6f338567278c11344802838c107055bf7c1641eaed61e879245c255a4f5be5746fc");
         nDefaultPort = 6600;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
@@ -265,8 +265,8 @@ public:
         vSeeds.clear();
         vSeeds.push_back(CDNSSeedData("nodes-test.shekel.pw", "nodes-test.shekel.pw")); // Primary DNS Seeder
         vSeeds.push_back(CDNSSeedData("shekel-test.nodes.gyservers.com", "shekel-test.nodes.gyservers.com")); // Secondary DNS Seeder
-        vSeeds.push_back(CDNSSeedData("shekel-test.seeds.mn.zone", "shekel-test.seeds.mn.zone")); // Single node address
-        vSeeds.push_back(CDNSSeedData("shekel-test.mnseeds.com", "shekel-test.mnseeds.com")); // Single node address
+        vSeeds.push_back(CDNSSeedData("shekel-test.seeds.mn.zone", "shekel-test.seeds.mn.zone")); // Third party DNS Seeder
+        vSeeds.push_back(CDNSSeedData("shekel-test.mnseeds.com", "shekel-test.mnseeds.com")); // Third party DNS Seeder
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet shekel addresses start with 'x' or 'y'
@@ -290,7 +290,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04188441e39d99aa69068ee07d26980f459b84465bbd765c6ee15d1aec5b76b5aebb01b24be184a1d3a12af61276549d96cc9499d909f8afc183132837d18d643d";
+        strSporkKey = "044e3bfa8d1a0f0807dfd6a85d18ad39e4df40b3b0c7fb1c46f4840805dbe0c810c6cfd2e56f7df41966433d2072aca2115e0dae56387a199d8d2aa69b52398436";
         strObfuscationPoolDummyAddress = "xp87cG8UEQgzs1Bk67Yk884C7pnQfAeo7q";
         nStartMasternodePayments = 1420837558; //Fri, 09 Jan 2015 21:05:58 GMT
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
