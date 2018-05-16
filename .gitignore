@@ -43,6 +43,8 @@ src/config/stamp-h1
 share/setup.nsi
 share/qt/Info.plist
 contrib/devtools/split-debug.sh
+src/leveldb/build_config.mk
+background.tiff*
 
 src/univalue/gen
 

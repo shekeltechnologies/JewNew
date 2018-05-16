@@ -54,14 +54,24 @@ static void convertSeed6(std::vector<CAddress>& vSeedsOut, const SeedSpec6* data
 // + Contains no strange transactions
 static Checkpoints::MapCheckpoints mapCheckpoints =
     boost::assign::map_list_of
-    (0, uint256("0x0000077c3b0f8619314ed8f0d343673052ab36b3ebac8808bd3bed50b9d60cec"));
+    (     0, uint256("0000077c3b0f8619314ed8f0d343673052ab36b3ebac8808bd3bed50b9d60cec"))
+    ( 20000, uint256("45119b5f3bc0643cbf8110130afa091ccf59f5d92acbd8b3133bbcd959f60ade"))
+    ( 40000, uint256("c63ca8bbd801eb843db59ef5dfa6aa6f090721fe2048d0bebc73b08e2e3f0a38"))
+    ( 60000, uint256("9e24dd235d69c744e5d18c08f696bc0e7fc5231e19f056c359bc83f1125f6c88"))
+    ( 80007, uint256("3cff26770e13a91e3b2c7b3a97cc2b7d44f05fa137c0427f34bb70650fe0596e"))
+    (100000, uint256("60fca92d1923597915a01dfc68a70bad694e90bb5c2425dbf10b69d55b706668"))
+    (120000, uint256("3aea8a3921f6367059936a974a0d1106fa13871c6fee02c33a7653c78e146d6c"))
+    (142000, uint256("8eefbb248726dca1b8331cbc57cacb1dd81c904ff363a4783034aff5f1af7f1e"));
+
 static const Checkpoints::CCheckpointData data = {
     &mapCheckpoints,
-    1514540176, // * UNIX timestamp of last checkpoint block
-    0,    // * total number of transactions between genesis and last checkpoint
+    1525587795, // * UNIX timestamp of last checkpoint block
+    319287,     // * total number of transactions between genesis and last checkpoint
                 //   (the tx=... number in the SetBestChain debug.log lines)
-    2000        // * estimated number of transactions per day after checkpoint
+    4104        // * estimated number of transactions per day after checkpoint
 };
+
+
 
 static Checkpoints::MapCheckpoints mapCheckpointsTestnet =
     boost::assign::map_list_of(0, uint256("0x001"));
@@ -156,20 +166,14 @@ public:
         genesis.nNonce = 626489;
 		
 		
-		hashGenesisBlock = genesis.GetHash();
+	hashGenesisBlock = genesis.GetHash();
         assert(hashGenesisBlock == uint256("0x0000077c3b0f8619314ed8f0d343673052ab36b3ebac8808bd3bed50b9d60cec"));
         assert(genesis.hashMerkleRoot == uint256("0xa1cbbd156e5c530444dc3c850daf40201fe37d3269bd84b1ff2333a1b0c55a90"));
 		
-		vSeeds.push_back(CDNSSeedData("nodes.shekel.pw", "nodes.shekel.pw")); // Primary DNS Seeder
-		vSeeds.push_back(CDNSSeedData("shekel.nodes.gyservers.com", "shekel.nodes.gyservers.com")); // Secondary DNS Seeder
-		vSeeds.push_back(CDNSSeedData("209.250.241.176", "209.250.241.176")); // Single node address
-		vSeeds.push_back(CDNSSeedData("209.250.243.131", "209.250.243.131")); // Single node address
-		vSeeds.push_back(CDNSSeedData("45.77.239.108", "45.77.239.108")); // Single node address
-		vSeeds.push_back(CDNSSeedData("107.191.44.102", "107.191.44.102")); // Single node address
-		vSeeds.push_back(CDNSSeedData("108.61.241.154", "199.247.6.191"));
-		vSeeds.push_back(CDNSSeedData("45.77.9.77", "45.77.9.77"));
-		vSeeds.push_back(CDNSSeedData("45.77.62.126", "45.77.62.126"));
-		vSeeds.push_back(CDNSSeedData("108.61.96.146", "108.61.96.146"));
+	vSeeds.push_back(CDNSSeedData("nodes.shekel.pw", "nodes.shekel.pw")); // Primary DNS Seeder
+	vSeeds.push_back(CDNSSeedData("shekel.nodes.gyservers.com", "shekel.nodes.gyservers.com")); // Secondary DNS Seeder
+	vSeeds.push_back(CDNSSeedData("shekel.seeds.mn.zone", "shekel.seeds.mn.zone")); // Third party DNS Seeder
+	vSeeds.push_back(CDNSSeedData("shekel.mnseeds.com", "shekel.mnseeds.com")); // Third party DNS Seeder
 		
 		
 
@@ -194,7 +198,7 @@ public:
         fHeadersFirstSyncingActive = false;
 
         nPoolMaxTransactions = 3;
-        strSporkKey = "0459eede7626441f7802af2736cb3a4aeb3e1f95070cde39d068a4f16525ee8fdd3c075f29f9e115aeb91952239194aa6ac19765574fed8a0d7f174f2b450e9630";
+        strSporkKey = "047da8dd8dd82c7247a2a6e236cc5e4d775e1e08a4ce95362b862685b094492699b4ffacf1f87cedaa5d633835986bb5f5fd4ff458c27bd3c03c9e3281342560c3";
         strObfuscationPoolDummyAddress = "SSQo21b24dD6AvQ2QyAfQFdBHTSw894tJb";
         nStartMasternodePayments = 1516371317; //Wed, 25 Jun 2014 20:36:16 GMT
 
@@ -226,12 +230,12 @@ public:
     {
         networkID = CBaseChainParams::TESTNET;
         strNetworkID = "test";
-        pchMessageStart[0] = 0x43;
+        pchMessageStart[0] = 0x33;
         pchMessageStart[1] = 0x76;
-        pchMessageStart[2] = 0x65;
-        pchMessageStart[3] = 0xba;
+        pchMessageStart[2] = 0x56;
+        pchMessageStart[3] = 0xca;
         vAlertPubKey = ParseHex("042292b1f401860eea99e1a8a103effbd7e1c013a59a1a3a0c91c9d1997a0bc6f338567278c11344802838c107055bf7c1641eaed61e879245c255a4f5be5746fc");
-        nDefaultPort = 51434;
+        nDefaultPort = 6600;
         nEnforceBlockUpgradeMajority = 51;
         nRejectBlockOutdatedMajority = 75;
         nToCheckBlockUpgradeMajority = 100;
@@ -254,14 +258,15 @@ public:
         genesis.nTime = 1515616140;
         genesis.nNonce = 79855;
 
-	    hashGenesisBlock = genesis.GetHash();
+	hashGenesisBlock = genesis.GetHash();
         //assert(hashGenesisBlock == uint256("0x000007cff63ef602a51bf074e384b3516f0dd202f14d52f7c8c9b1af9423ab2e"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
-        vSeeds.push_back(CDNSSeedData("45.76.61.28", "207.148.0.129"));         // Single node address
-        vSeeds.push_back(CDNSSeedData("209.250.240.94", "45.77.239.30"));       // Single node address
-        vSeeds.push_back(CDNSSeedData("45.77.176.204", "45.76.226.204"));       // Single node address
+        vSeeds.push_back(CDNSSeedData("nodes-test.shekel.pw", "nodes-test.shekel.pw")); // Primary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("shekel-test.nodes.gyservers.com", "shekel-test.nodes.gyservers.com")); // Secondary DNS Seeder
+        vSeeds.push_back(CDNSSeedData("shekel-test.seeds.mn.zone", "shekel-test.seeds.mn.zone")); // Third party DNS Seeder
+        vSeeds.push_back(CDNSSeedData("shekel-test.mnseeds.com", "shekel-test.mnseeds.com")); // Third party DNS Seeder
 
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139); // Testnet shekel addresses start with 'x' or 'y'
@@ -285,7 +290,7 @@ public:
         fTestnetToBeDeprecatedFieldRPC = true;
 
         nPoolMaxTransactions = 2;
-        strSporkKey = "04188441e39d99aa69068ee07d26980f459b84465bbd765c6ee15d1aec5b76b5aebb01b24be184a1d3a12af61276549d96cc9499d909f8afc183132837d18d643d";
+        strSporkKey = "044e3bfa8d1a0f0807dfd6a85d18ad39e4df40b3b0c7fb1c46f4840805dbe0c810c6cfd2e56f7df41966433d2072aca2115e0dae56387a199d8d2aa69b52398436";
         strObfuscationPoolDummyAddress = "xp87cG8UEQgzs1Bk67Yk884C7pnQfAeo7q";
         nStartMasternodePayments = 1420837558; //Fri, 09 Jan 2015 21:05:58 GMT
         nBudget_Fee_Confirmations = 3; // Number of confirmations for the finalization fee. We have to make this very short
