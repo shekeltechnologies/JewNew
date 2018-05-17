@@ -34,6 +34,16 @@ QMenuBar::item:selected {
 background-color:#363940;
 }
 
+QTabBar::tab {
+background:#2f3137;
+color:#fff;
+}
+
+QTabBar::tab:selected, QTabBar::tab:hover {
+background:#42464e;
+color:#fff;
+}
+
 QMenu {
 background-color:#363940;
 }
